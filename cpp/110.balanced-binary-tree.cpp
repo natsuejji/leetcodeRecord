@@ -3,6 +3,14 @@
  *
  * [110] Balanced Binary Tree
  */
+struct TreeNode {
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode() : val(0), left(nullptr), right(nullptr) {}
+    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+    TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+};
 
 // @lc code=start
 
@@ -17,6 +25,8 @@
 // };
 
 #include <stdio.h>
+#include <math.h>
+using namespace std;
 class Solution {
 private:
     bool ans;
